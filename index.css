@@ -7,36 +7,69 @@ html, body {
 
 img {
     width: 150px;
-    margin-top: 50px;
+    margin: 20px auto;
+
 }
 
 h1 {
     font-family: "Josefin Sans", sans-serif;
     color: #ffff;
+    text-align: center;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    max-width: 420px;
+    margin: 0 auto;
     gap: 20px;
 }
 
 
 input {
-    padding: 10px 200px 150px 10px;
+    padding: 10px 10px 100px;
     text-align: start;
     background-color: #444059;
     border: none;
     border-radius: 8px;
     color: #8F8F8F;
+    font-family: "Inter", sans-serif;
+}
+
+h2 {
+    color: #ffff;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    
 }
 
 
 button {
-    padding: 20px 180px;
+    padding: 20px 100px;
     border: none;
     border-radius: 8px;
     background-color: #38BDF8;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+
+}
+
+ul li {
+    padding: 20px;
+    background-color: #ffff;
+    box-shadow: 0 1px 4px rgb(0,0,0,0.2);
+    font-family: "Inter", sans-serif;
+
 }
