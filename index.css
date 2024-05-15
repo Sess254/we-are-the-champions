@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #111827;
+}
+
+
+img {
+    width: 150px;
+    margin-top: 50px;
+}
+
+h1 {
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+input {
+    padding: 10px 200px 150px 10px;
+    text-align: start;
+    background-color: #444059;
+    border: none;
+    border-radius: 8px;
+    color: #8F8F8F;
+}
+
+
+button {
+    padding: 20px 180px;
+    border: none;
+    border-radius: 8px;
+    background-color: #38BDF8;
+}
