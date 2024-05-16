@@ -35,6 +35,7 @@ input {
     background-color: #444059;
     border: none;
     border-radius: 8px;
+    text-wrap: wrap;
     color: #8F8F8F;
     font-family: "Inter", sans-serif;
 }
