@@ -28,6 +28,16 @@ h1 {
     gap: 20px;
 }
 
+.to-from {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 10px;
+
+}
+
 
 input {
     padding: 10px 10px 100px;
@@ -38,6 +48,12 @@ input {
     text-wrap: wrap;
     color: #8F8F8F;
     font-family: "Inter", sans-serif;
+}
+
+#inputTo-el, #inputFrom-el {
+    padding: 20px 0;
+    width: 205px;
+    text-align: center;
 }
 
 h2 {
@@ -61,7 +77,7 @@ button {
 
 ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     max-width: 400px;
     margin: 0 auto;
     list-style: none;
@@ -76,5 +92,17 @@ ul li {
     box-shadow: 0 1px 4px rgb(0,0,0,0.2);
     font-family: "Inter", sans-serif;
     color: black;
+    min-width: 380px;
 
+}
+
+label {
+    border: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    width: 1px !important;
 }

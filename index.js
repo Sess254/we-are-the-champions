@@ -42,7 +42,7 @@ onValue(endorsementInDB, function(snapshot) {
 
 
 // function that clears the input field
-function clearInputField() {
+function clearInputField()  {
     inputFieldEl.value = ""
 }
 
