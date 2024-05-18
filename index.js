@@ -12,11 +12,23 @@ const endorsementInDB = ref(database, "endorsements")
 const inputFieldEl = document.getElementById("input-field")
 const publishButtonEl = document.getElementById("publish-button")
 const endorsementEl = document.getElementById("endorsement-el")
+const inputFromEl = document.getElementById("inputFrom-el")
+const inputToEl = document.getElementById("inputTo-el")
 
 // publish button event listener
 publishButtonEl.addEventListener("click", function() {
-    let inputValue = inputFieldEl.value
-    push(endorsementInDB, inputValue)
+    const inputValue = inputFieldEl.value
+    const inputFromValue = inputFromEl.value
+    const inputToValue = inputToEl.value
+
+    let endorsementObj = {
+        "endorsementText": inputValue,
+        "endorsementFrom": inputFromValue,
+        "endorsementTo": inputToValue
+    }
+
+
+    push(endorsementInDB, endorsementObj)
     clearInputField()
 })
 
@@ -44,6 +56,8 @@ onValue(endorsementInDB, function(snapshot) {
 // function that clears the input field
 function clearInputField()  {
     inputFieldEl.value = ""
+    inputFromEl.value = ""
+    inputToEl.value = ""
 }
 
 // funtion that appends new endorsements to the endorsements list
@@ -53,7 +67,12 @@ function appendToendorsementList(item) {
 
     let newEl = document.createElement("li")
 
-    newEl.textContent = itemValue
+    newEl.innerHTML = `
+    <h3>To ${itemValue.endorsementTo}</h3>
+
+    <p>${itemValue.endorsementText}
+
+    <h3>From ${itemValue.endorsementFrom}`
 
     // function deletes endorsements from te database
     newEl.addEventListener("dblclick", function() {
